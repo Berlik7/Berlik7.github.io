@@ -1,0 +1,32 @@
+body {
+      margin: 0;
+    }
+
+    .menu {
+      position: fixed;
+      top: 20%;
+      left: ;eft: 20px;
+      transform: translateY(-50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .menu a:hover,
+    .menu a.active { /* Стиль для выбранного пункта */
+      background-color: #eee;
+      font-weight: bold;
+    }
+    .pr{
+      margin-top: 100px;
+      display: inline-block;
+    }

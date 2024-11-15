@@ -1,0 +1,90 @@
+nav ul li a.active
+{
+  font-weight: bold;
+  color: #6A5ACD; /* или другой цвет */
+}
+.info{
+  display: inline-block;
+}
+.row{
+  margin-left: 55px;
+}
+h2{
+  margin-top: 150px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-left: -70px;
+}
+.mu{
+  display: inline-block;
+}
+li{
+  margin-top: 20px;
+}
+.foto{
+  margin-top: 100px;
+  display: inline-block;
+}
+.btn {
+  display: inline-block;
+  padding: 0.5em 2em;
+  font-size: 0.9em;
+  background-color: #323e4e;
+  color: #fff;
+  border: none;
+  width: 200px;
+  height: 80px;
+  margin-right: 200px;
+}
+.b{
+  margin-left: 180px;
+  margin-top: 50px;
+}
+.v{
+  margin-left: 30px;
+}
+form{
+  text-align: center;
+  background-color: #DFDFDF;
+}
+
+ body {
+      margin: 0;
+    }
+
+    .menu {
+      position: fixed;
+      top: 0; /* Изменено: меню сверху */
+      left: 0;
+      width: 100%; /* Занимает всю ширину */
+      background-color: #fff;
+      padding: 10px 20px; /* Изменены отступы */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+      z-index: 1000; /* Устанавливаем z-index для отображения поверх другого контента */
+    }
+
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex; /* Горизонтальное расположение пунктов */
+      justify-content: space-around; /* Распределение пунктов по ширине */
+    }
+
+    .menu li {
+      margin: 0 10px; /* Отступы между пунктами */
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 15px; /* Изменены отступы */
+    }
+
+    .menu a:hover {
+      background-color: #eee;
+    }
+
+    .menu a.active {
+      font-weight: bold;
+    }

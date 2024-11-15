@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/pas2.css">
+    <title>Паспорт РФ</title>
+
+
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=InKLlwJqtt6JNtc8cyZeuhOWsQ4J4qdhpKjlaRKn11IViNAv2nAFdpaJSBXDHj3FVo6QeOpQNAa25qajJlVEMrhJUvQAdqqXjFMHsXP42Mc" charset="UTF-8"></script><style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .passport-container {
+            position: relative;
+            display: inline-block;
+        }
+        .passport-container img {
+            width: 600px;
+            height: auto;
+        }
+        .text {
+            position: absolute;
+            color: black;
+            font-size: 1.2em;
+        }
+        #issued {
+            top: 85px;
+            left: 170px;
+        }
+        #surname {
+            top: 465px;
+            left: 350px;
+        }
+        #name {
+            top: 530px;
+            left: 340px;
+        }
+        #father {
+            top: 560px;
+            left: 325px;
+        }
+        #gender {
+            top: 590px;
+            left: 234px;
+        }
+        #birthplace {
+            top: 620px;
+            left: 340px;
+        }
+        #photo {
+            position: absolute;
+            top: 494px;
+            left: 25px;
+            width: 168px;
+            height: auto;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: grey;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+      }
+* {
+
+  padding: 0px;
+}
+
+
+
+body{
+  font-family:  'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <a href="index.html" class="active" >Вернуться на главную</a>
+
+
+<main>
+     
+    
+  </div>
+    <div class="passport-container">
+        <img src="img/макетп.jpg" alt="Паспорт РФ">
+
+        <img id="photo" src="img/фото.jpg" alt="Фото" title="Это фотография ">
+
+        <div class="text" id="issued">ГУ МВД ПО Г. МОСКВЕ</div>
+        <div class="text" id="surname">Берлинова</div>
+        <div class="text" id="name">Анна</div>
+        <div class="text" id="father">Николаевна</div>
+        <div class="text" id="gender">жен</div>
+        <div class="text" id="birthplace">Москва</div>
+    </div>
+
+    <div class="button-container">
+        <button id="translateButton">Поменять</button>
+    </div>
+</main>
+<div class="pr">
+    <img src="img/п1.jpg">
+</div>
+
+<div class="pr">
+    <img src="img/п.jpg">
+</div>
+
+
+
+
+
+<script>
+    document.getElementById('translateButton').addEventListener('click', function() {
+        const issuedText = document.getElementById('issued');
+        const surnameText = document.getElementById('surname');
+        const nameText = document.getElementById('name');
+        const patronymicText = document.getElementById('father');
+        const genderText = document.getElementById('gender');
+        const birthplaceText = document.getElementById('birthplace');
+
+        if (issuedText.innerText === 'ГУ МВД ПО Г. МОСКВЕ') {
+            issuedText.innerText = 'MOSCOW GU MVD';
+            surnameText.innerText = 'Berlinova';
+            nameText.innerText = 'Anna';
+            patronymicText.innerText = 'Nikolaevna';
+            genderText.innerText = 'female';
+            birthplaceText.innerText = 'Moscow';
+        } else {
+            issuedText.innerText = 'ГУ МВД ПО Г. МОСКВЕ';
+            surnameText.innerText = 'Берлинова';
+            nameText.innerText = 'Анна';
+            patronymicText.innerText = 'Николаевна';
+            genderText.innerText = 'жен';
+            birthplaceText.innerText = 'Москва';
+        }
+    });
+</script>
+
+</body>
+</html>
