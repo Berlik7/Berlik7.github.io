@@ -1,2 +1,2 @@
-# Berlik7.github.io
-project_1
+# [Berlik7.github.io](https://berlik7.github.io/src/)
+
