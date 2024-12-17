@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+     <link rel="stylesheet" href="css/a.css">
+    <title>Размен денег</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Размен денег</h1>
+     <div class="menu">
+    <a href="index.html" class="active" >Вернуться на главную</a>
+    
+  </div>
+    <div class="vv">
+        <div class="c">
+            <label for="amount">Введите сумму (в рублях):</label>
+        </div>
+    <input type="number" id="amount" placeholder="Например, 1234" required>    
+    <div class="text-box">
+    <a href="#" class="btn btn-white btn-animate" onclick="makeChange()">Разменять</a>
+</div>
+
+    <div class="r">
+        <div id="result"></div>  
+    </div>
+    </div> 
+    
+
+    <script>
+        function makeChange() {
+            const amount = parseInt(document.getElementById('amount').value);
+            let result = '';
+
+            if (isNaN(amount) || amount < 0) {
+                result = 'Пожалуйста, введите корректную сумму.';
+            } else {
+                let remainingAmount = amount;
+
+                // Счетчик купюр и монет
+                let bills500 = Math.floor(remainingAmount / 500);
+                remainingAmount %= 500;
+
+                let bills100 = Math.floor(remainingAmount / 100);
+                remainingAmount %= 100;
+
+                let bills10 = Math.floor(remainingAmount / 10);
+                remainingAmount %= 10;
+
+                let coins2 = Math.floor(remainingAmount / 2);
+                remainingAmount %= 2;
+
+                // Формирование результата
+                if (bills500 > 0) {
+                    result += `500 рублей: ${bills500} шт.<br>`;
+                }
+                if (bills100 > 0) {
+                    result += `100 рублей: ${bills100} шт.<br>`;
+                }
+                if (bills10 > 0) {
+                    result += `10 рублей: ${bills10} шт.<br>`;
+                }
+                if (coins2 > 0) {
+                    result += `2 рубля: ${coins2} шт.<br>`;
+                }
+
+                if (remainingAmount > 0) {
+                    result += 'Остаток неразменяемый: ' + remainingAmount + ' руб.';
+                } else {
+                    result += 'Размен успешно завершен!';
+                }
+            }
+
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>
