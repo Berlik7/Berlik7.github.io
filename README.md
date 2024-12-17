@@ -1,2 +1,2 @@
 # [Berlik7.github.io](https://berlik7.github.io/src/)
-# [Berlik7.github.io](https://berlik7.github.io/src2/)
+# [Задание 2](https://berlik7.github.io/src2/)
